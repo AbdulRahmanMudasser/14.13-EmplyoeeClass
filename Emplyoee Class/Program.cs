@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿class Employee
+{
+    // declaring variables
+    private string firstName;
+    private string lastName;
+    private decimal monthlySalary;
+}
