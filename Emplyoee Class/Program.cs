@@ -23,4 +23,18 @@
         get => monthlySalary;
         set => monthlySalary = value;
     }
+
+    // constructor
+    public Employee(string firstName, string lastName, decimal monthlySalary) 
+    { 
+        FirstName = firstName;
+        LastName = lastName;
+        MonthlySalary = monthlySalary;
+    }
+}
+// end of Employee class
+
+class EmployeeTest
+{
+
 }
