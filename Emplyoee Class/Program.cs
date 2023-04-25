@@ -20,7 +20,7 @@
 
     public decimal MonthlySalary
     {
-        get => monthlySalary;
+        get { return monthlySalary; }
         set
         {
             if (monthlySalary >= 0)
