@@ -31,6 +31,18 @@
         LastName = lastName;
         MonthlySalary = monthlySalary;
     }
+
+    // yearly salary
+    public decimal yearlySalary()
+    {
+        return MonthlySalary * 12;
+    }
+
+    // raise method
+    public decimal raise()
+    {
+        return MonthlySalary += MonthlySalary / 10;
+    }
 }
 // end of Employee class
 
@@ -41,7 +53,7 @@ class EmployeeTest
         Employee employee1 = new Employee("Abdul", "Rahman", 7800.75m);
         Employee employee2 = new Employee("Dua", "Fatima", 6300.30m);
 
-        Console.WriteLine("Employee One \n\nName: {0} {1} \nMonthly Salary: {2} \nYearly Salary: {3}", employee1.FirstName, employee1.LastName, employee1.MonthlySalary, employee1.MonthlySalary * 12);
-        Console.WriteLine("\nEmployee Two \n\nName: {0} {1} \nMonthly Salary: {2} \nYearly Salary: {3}", employee2.FirstName, employee2.LastName, employee2.MonthlySalary, employee2.MonthlySalary * 12);
+        Console.WriteLine("Employee One \n\nName: {0} {1} \nMonthly Salary: {2:C2} \nYearly Salary: {3:C2} \nMonthly Salary With 10% Raise: {4:C2} \nYearly Salary With 10% Raise: {5:C2}", employee1.FirstName, employee1.LastName, employee1.MonthlySalary, employee1.yearlySalary(), employee1.raise(), employee1.yearlySalary());
+        Console.WriteLine("\nEmployee Two \n\nName: {0} {1} \nMonthly Salary: {2:C2} \nYearly Salary: {3:C2} \nMonthly Salary With 10% Raise: {4:C2} \nYearly Salary With 10% Raise: {5:C2}", employee2.FirstName, employee2.LastName, employee2.MonthlySalary, employee2.yearlySalary(), employee2.raise(), employee2.yearlySalary());
     }
 }
