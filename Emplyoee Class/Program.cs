@@ -21,7 +21,13 @@
     public decimal MonthlySalary
     {
         get => monthlySalary;
-        set => monthlySalary = value;
+        set
+        {
+            if (monthlySalary >= 0)
+            {
+                monthlySalary = value;
+            }
+        }
     }
 
     // constructor
